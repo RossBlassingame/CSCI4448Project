@@ -48,7 +48,7 @@ TO DO
 * **Josh Jenkins** - *Stuff* - [Github Link Needed](https://github.com/)
 * **Griffith Neumark** - *Stuff* - [Github Link Needed](https://github.com/)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/RossBlassingame/CSCI4448Project/graphs/contributors) who participated in this project.
 
 ## Acknowledgments
 
