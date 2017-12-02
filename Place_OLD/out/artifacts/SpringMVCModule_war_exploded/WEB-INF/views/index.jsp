@@ -13,7 +13,10 @@
 </head>
 
 <body>
+  <div id="Header">
+    <p class="hd1" style="position: absolute; left: 30px">Place</p>
+  </div>
 <!--<p id="title">Hello, World</p>-->
-<p id="title">${someAttribute}</p>
+<!--<p id="title">${someAttribute}</p>-->
 </body>
 </html>

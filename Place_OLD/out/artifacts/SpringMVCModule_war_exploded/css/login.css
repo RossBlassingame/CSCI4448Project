@@ -1,8 +1,17 @@
 body{
     background-color: rgba(50,50,50,1);
 }
-#title{
-    color: ivory;
-    font-size: large;
-    margin: auto;
+.hd1{
+    color:rgba(50,50,50,1);
+    font-size: 36px;
+    font-family: Helvetica, "Helvetica Neue", Arial;
+}
+#header{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 12%;
+    background-color: springgreen;
+    -webkit-box-shadow: -3px 5px 10px black;
 }

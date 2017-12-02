@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class ExampleSpringController {
     @GetMapping("/")
     public String index(Model m) {
-        m.addAttribute("someAttribute", "Place - Hello, World!");
+        m.addAttribute("someAttribute","Hello, World");
         return "index";
     }
 
