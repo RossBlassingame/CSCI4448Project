@@ -5,5 +5,10 @@ public class Comment {
 	int commentID;
 	// Each comment has some content.
 	String commentContent;
+
+	Comment(String content){
+		//TODO Generate unique ID
+		commentContent = content;
+	}
 	
 }
