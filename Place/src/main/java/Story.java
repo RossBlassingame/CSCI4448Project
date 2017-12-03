@@ -24,5 +24,9 @@ public class Story {
 		 * story's comments.
 		 */
 	}
-	
+
+	int getStoryID()
+	{
+		return storyID;
+	}
 }
