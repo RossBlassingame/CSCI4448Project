@@ -6,19 +6,18 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<!DOCTYPE HTML>
-<html xmlns:th="http://www.thymeleaf.org">
+<html>
 <head>
-  <title>Getting Started: Handling Form Submission</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>Place</title>
+  <!--<link rel="stylesheet" type="text/css" href="../../css/login.css">-->
 </head>
+
 <body>
-<h1>Form</h1>
-<form action="#" th:action="@{/greeting}" th:object="${greeting}" method="post">
-  <p>Id: <input type="text" th:field="*{id}" /></p>
-  <p>Message: <input type="text" th:field="*{content}" /></p>
-  <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
-</form>
+<div id="Header">
+  <p class="hd1" style="position: absolute; left: 30px">Place</p>
+</div>
+<!--<p id="title">Hello, World</p>-->
+<p>Hello ${person.firstName} ${person.lastName}!</p>
+
 </body>
 </html>
-
