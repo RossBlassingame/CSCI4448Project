@@ -9,7 +9,7 @@
 <html>
 <head>
   <title>Place</title>
-  <link rel="stylesheet" type="text/css" href="../../css/login.css">
+  <link rel="stylesheet" type="text/css" href="../../css/story.css">
 </head>
 
 <body>
@@ -18,9 +18,10 @@
 </div>
 
 <div>
-  <div id="signup">
-    <p>Hello ${account.userName}! Your password is ${account.password}!</p>
-  </div>
+    <div id="story">
+        <p>Hello, World</p>
+        <p>Hello ${account.userName}! Your password is ${account.password}!</p>
+    </div>
 </div>
 
 </body>

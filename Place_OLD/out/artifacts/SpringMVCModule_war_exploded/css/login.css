@@ -24,19 +24,7 @@ p{
     -webkit-box-shadow: -3px 5px 10px rgba(0,0,0,0.5);
 }
 
-#story{
-    position: absolute;
-    margin: auto;
-    top: 0px;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    text-align: center;
-    width: 350px;
-    height: 400px;
-    background-color: rgba(245,245,245,1);
-    -webkit-box-shadow: -3px 5px 10px rgba(0,0,0,0.2);
-}
+
 
 #signup{
     position: absolute;
@@ -53,7 +41,3 @@ p{
 }
 
 
-
-.container{
-    position: relative;
-}
