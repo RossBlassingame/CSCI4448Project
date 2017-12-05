@@ -33,4 +33,8 @@ public class Story {
 	{
 		return storyID;
 	}
+	void setStoryContent(String content)
+	{
+		storyContent = content;
+	}
 }

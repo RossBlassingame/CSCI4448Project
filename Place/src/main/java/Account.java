@@ -37,7 +37,7 @@ public abstract class Account {
 		return null;
 	}
 	// TODO Editing a story may be different for admins vs. users.
-	abstract Boolean editStory(int storyID);
+	abstract Boolean editStory(int storyID, String content);
 	// TODO Deleting a story may be different for admins vs. users.
 	abstract Boolean deleteStory(int storyID);
 	
