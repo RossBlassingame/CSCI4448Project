@@ -1,13 +1,15 @@
 package org.csci4448.controllers;
 
+import java.util.ArrayList;
+
 public abstract class Account {
 	
 	// Each account has a unique accountID.
-	protected int accountID;
+	int accountID;
 	// Each account has an associated email.
-	protected String email;
+	String email;
 	// Each account has a userName.
-	protected String userName;
+	String userName;
 	
 	/*
 	 * Each account has a password. 
@@ -24,29 +26,20 @@ public abstract class Account {
 	 * Each account has a list of stories. (Like viewing a Facebook profile, one 
 	 * may view a user's post history.
 	 */
-	Story[] listOfStories;
 
-	public void setEmail(String e){
-		email = e;
-	}
-	public String getEmail(){
-		return email;
-	}
-	public void setUserName(String n){
-		userName = n;
-	}
-	public String getUserName(){
-		return userName;
-	}
+	ArrayList<Story> listOfStories = new ArrayList<Story>();
 	
 	Boolean addStory(String storyContent) {
 		/* TODO
 		 * Adding a story should work the same for both admins and users.
 		 */
+		Story story = new Story(storyContent);
+		listOfStories.add(story);
+
 		return null;
 	}
 	// TODO Editing a story may be different for admins vs. users.
-	abstract Boolean editStory(int storyID);
+	abstract Boolean editStory(int storyID, String content);
 	// TODO Deleting a story may be different for admins vs. users.
 	abstract Boolean deleteStory(int storyID);
 	

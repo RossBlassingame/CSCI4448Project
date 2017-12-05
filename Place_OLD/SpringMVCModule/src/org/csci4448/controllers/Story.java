@@ -1,5 +1,7 @@
 package org.csci4448.controllers;
 
+import java.util.ArrayList;
+
 public class Story {
 	
 	// Each story has a unique storyID.
@@ -7,7 +9,20 @@ public class Story {
 	// Each story has some content.
 	String storyContent;
 	// Each story has a list of contents (may be empty).
-	Comment[] listOfComments;
+	ArrayList<Comment> listOfComments = new ArrayList<Comment>();
+
+	Story(String content){
+		//TODO generate unique ID
+		storyContent = content;
+	}
+
+	void addComment(String content){
+		listOfComments.add(new Comment(content));
+	}
+
+	void deleteComment(int cNum) {
+		listOfComments.remove(cNum);
+	}
 	
 	void notifyAllComments() {
 		/*
@@ -15,5 +30,13 @@ public class Story {
 		 * story's comments.
 		 */
 	}
-	
+
+	int getStoryID()
+	{
+		return storyID;
+	}
+	void setStoryContent(String content)
+	{
+		storyContent = content;
+	}
 }
