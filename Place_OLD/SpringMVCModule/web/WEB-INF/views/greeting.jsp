@@ -16,6 +16,7 @@
 <div id="Header">
   <p class="hd1" style="position: absolute; left:20px; top:-15px; ">${account.userName}</p>
 </div>
+
 <div>
   <div id="signup">
     <p>Hello ${account.userName}! Your password is ${account.password}!</p>

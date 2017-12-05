@@ -47,35 +47,35 @@ public class UserAccount extends Account {
 		return null;
 	}
 
-	int getAccountID()
+	public int getAccountID()
 	{
 		return this.accountID;
 	}
-	void setAccountID(int id)
+	public void setAccountID(int id)
 	{
 		this.accountID = id;
 	}
-	String getEmail()
+	public String getEmail()
 	{
-		return this.email;
+		return email;
 	}
-	void setEmail(String email)
+	public void setEmail(String _email)
 	{
-		this.email = email;
+		email = _email;
 	}
-	String getUserName()
+	public String getUserName()
 	{
 		return this.userName;
 	}
-	void setUserName(String username)
+	public void setUserName(String username)
 	{
 		this.userName = username;
 	}
-	String getPassword()
+	public String getPassword()
 	{
 		return this.password;
 	}
-	void setPassword(String password)
+	public void setPassword(String password)
 	{
 		this.password = password;
 	}

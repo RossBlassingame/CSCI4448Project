@@ -14,6 +14,8 @@ public class ExampleSpringController {
 
     @RequestMapping(value = "/index", method = RequestMethod.POST)
     public String sayHello(UserAccount a, Model model) {
+        /* Get attributes of object a: userName, Password */
+        a.addStory("This is my first Story!");
         model.addAttribute("account", a);
         return "greeting";
     }

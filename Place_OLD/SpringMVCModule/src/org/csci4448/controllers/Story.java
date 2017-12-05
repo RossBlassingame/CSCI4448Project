@@ -16,6 +16,7 @@ public class Story {
 		storyContent = content;
 	}
 
+
 	void addComment(String content){
 		listOfComments.add(new Comment(content));
 	}
@@ -31,12 +32,19 @@ public class Story {
 		 */
 	}
 
-	int getStoryID()
+	public int getStoryID()
 	{
 		return storyID;
 	}
-	void setStoryContent(String content)
+	public void setStoryID(int _id){
+		storyID = _id;
+	}
+	public String getStoryContent(){
+		return storyContent;
+	}
+	public void setStoryContent(String content)
 	{
 		storyContent = content;
 	}
+
 }

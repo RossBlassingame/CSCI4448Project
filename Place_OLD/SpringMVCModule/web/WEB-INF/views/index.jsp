@@ -21,13 +21,10 @@
     <div id="signup">
         <p>Sign Up</p>
         <form:form method="post" modelAttribute="account">
-            <!--<form:label path="email">First name</form:label>-->
             <form:input path="email" placeholder="Email"/>
             <br />
-            <!--<form:label path="userName">Last name</form:label>-->
             <form:input path="userName" placeholder="User Name"/>
             <br />
-            <!--<form:label path="password">Last name</form:label>-->
             <form:input path="password" placeholder="Password" type="password"/>
             <br />
             <input type="submit" value="Create Account" />
