@@ -18,6 +18,10 @@ public class Story {
 		listOfComments.add(new Comment(content));
 	}
 
+	void deleteComment(int cNum) {
+		listOfComments.remove(cNum);
+	}
+	
 	void notifyAllComments() {
 		/*
 		 * TODO Method that notifies all of the current
