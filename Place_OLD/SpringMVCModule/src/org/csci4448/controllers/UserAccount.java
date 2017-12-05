@@ -2,7 +2,9 @@ package org.csci4448.controllers;
 
 public class UserAccount extends Account {
 
+	UserAccount(){
 
+	}
 
 	UserAccount( int accountid, String email, String username, String password)
 	{
