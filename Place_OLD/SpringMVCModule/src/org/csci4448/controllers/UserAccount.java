@@ -46,5 +46,38 @@ public class UserAccount extends Account {
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+	int getAccountID()
+	{
+		return this.accountID;
+	}
+	void setAccountID(int id)
+	{
+		this.accountID = id;
+	}
+	String getEmail()
+	{
+		return this.email;
+	}
+	void setEmail(String email)
+	{
+		this.email = email;
+	}
+	String getUserName()
+	{
+		return this.userName;
+	}
+	void setUserName(String username)
+	{
+		this.userName = username;
+	}
+	String getPassword()
+	{
+		return this.password;
+	}
+	void setPassword(String password)
+	{
+		this.password = password;
+	}
 	
 }

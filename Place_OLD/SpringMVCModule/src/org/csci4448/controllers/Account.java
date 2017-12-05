@@ -5,11 +5,11 @@ import java.util.ArrayList;
 public abstract class Account {
 	
 	// Each account has a unique accountID.
-	int accountID;
+	protected int accountID;
 	// Each account has an associated email.
-	String email;
+	protected String email;
 	// Each account has a userName.
-	String userName;
+	protected String userName;
 	
 	/*
 	 * Each account has a password. 
@@ -20,7 +20,7 @@ public abstract class Account {
 	 * in the DB. If they match, the user entered the correct password and we will continue. If they don't match, the user
 	 * entered an incorrect password.
 	 */
-	String password;
+	protected String password;
 	
 	/* 
 	 * Each account has a list of stories. (Like viewing a Facebook profile, one 
