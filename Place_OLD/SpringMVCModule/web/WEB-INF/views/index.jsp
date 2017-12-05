@@ -20,16 +20,17 @@
 <div>
     <div id="signup">
         <p>Sign Up</p>
-        <form:form method="post" modelAttribute="person">
-            <form:label path="firstName">First name</form:label>
-            <form:input path="firstName" />
+        <form:form method="post" modelAttribute="account">
+            <!--<form:label path="email">First name</form:label>-->
+            <form:input path="email" placeholder="Email"/>
             <br />
-
-            <form:label path="lastName">Last name</form:label>
-            <form:input path="lastName" />
+            <!--<form:label path="userName">Last name</form:label>-->
+            <form:input path="userName" placeholder="User Name"/>
             <br />
-
-            <input type="submit" value="Submit" />
+            <!--<form:label path="password">Last name</form:label>-->
+            <form:input path="password" placeholder="Password" type="password"/>
+            <br />
+            <input type="submit" value="Create Account" />
         </form:form>
     </div>
 </div>

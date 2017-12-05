@@ -9,15 +9,18 @@
 <html>
 <head>
   <title>Place</title>
-  <!--<link rel="stylesheet" type="text/css" href="../../css/login.css">-->
+  <link rel="stylesheet" type="text/css" href="../../css/login.css">
 </head>
 
 <body>
 <div id="Header">
-  <p class="hd1" style="position: absolute; left: 30px">Place</p>
+  <p class="hd1" style="position: absolute; left:20px; top:-15px; ">${account.userName}</p>
 </div>
-<!--<p id="title">Hello, World</p>-->
-<p>Hello ${person.firstName} ${person.lastName}!</p>
+<div>
+  <div id="signup">
+    <p>Hello ${account.userName}! Your password is ${account.password}!</p>
+  </div>
+</div>
 
 </body>
 </html>

@@ -6,16 +6,15 @@ import org.springframework.web.bind.annotation.*;
 
 @Controller
 public class ExampleSpringController {
-    @RequestMapping(value = "/", method = RequestMethod.GET)
+    @RequestMapping(value = "/index", method = RequestMethod.GET)
     public String showHelloPage(Model model) {
-        model.addAttribute("person", new Person());
+        model.addAttribute("account", new UserAccount());
         return "index";
     }
 
-    @RequestMapping(value = "/", method = RequestMethod.POST)
-    public String sayHello(Person person, Model model) {
-        model.addAttribute("person", person);
+    @RequestMapping(value = "/index", method = RequestMethod.POST)
+    public String sayHello(UserAccount a, Model model) {
+        model.addAttribute("account", a);
         return "greeting";
     }
-
 }
