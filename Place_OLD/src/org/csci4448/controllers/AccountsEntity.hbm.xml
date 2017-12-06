@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="org.csci4448.controllers.AccountsEntity" table="Accounts" schema="PlaceDB">
+        <id name="accountId">
+            <column name="accountID" sql-type="int(11)"/>
+        </id>
+        <property name="userName">
+            <column name="userName" sql-type="varchar(20)" length="20" not-null="true"/>
+        </property>
+        <property name="password">
+            <column name="password" sql-type="varchar(20)" length="20" not-null="true"/>
+        </property>
+        <property name="email">
+            <column name="email" sql-type="varchar(40)" length="40" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>
