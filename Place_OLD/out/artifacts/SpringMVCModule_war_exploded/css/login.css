@@ -1,5 +1,5 @@
 body{
-    background-color: rgba(50,50,50,1);
+    background-color: rgba(21,26,34,1);
 }
 p{
     font-family: Helvetica, Helvetica Neue, Ariel;
@@ -14,17 +14,17 @@ p{
     font-size: 36px;
     font-family: Helvetica, "Helvetica Neue", Arial;
 }
+
 #header{
     position: absolute;
-    left: 0;
+    right: 0;
     top: 0;
-    width: 100%;
-    height: 12%;
-    background-color: springgreen;
+    bottom: 0;
+    width: 40%;
+    height: 100%;
+    background-color: rgba(25,167,119,1);
     -webkit-box-shadow: -3px 5px 10px rgba(0,0,0,0.5);
 }
-
-
 
 #signup{
     position: absolute;
@@ -41,3 +41,8 @@ p{
 }
 
 
+.input{
+    width:300px;
+    height:30px;
+    margin: 2px;
+}
