@@ -80,40 +80,53 @@
 
 
     </style>
-    <script type="text/javascript"></script>
+    <script type="text/javascript">
+        function validatePassword(pwd){
+            var password = pwd.value;
+            if(password.length < 8){
+                document.getElementById("password").style.backgroundColor = "#ff3f31";
+                return;
+            }else if(!/[!?@#$%]/.test(password) || !/[0-9]/.test(password)){
+                document.getElementById("password").style.backgroundColor = "#ffd22e";
+                return;
+            }else{
+                document.getElementById("password").style.backgroundColor = "rgba(25,167,119,1)";
+            }
+            return;
+        }
+    </script>
 </head>
 
 <body>
 <p class="p" style="position:absolute; left:20px; top:-15px; font-size: 36px; font-weight: 300;">Place</p>
-<div id="header">
-    <div style="position: absolute; right:10%; top:30%;">
-        <p class="p" style="font-size: 24px; font-weight: 300">Log In</p>
-    <form:form method="post" modelAttribute="account">
-        <form:input cssClass="input" path="userName" placeholder="User Name"/>
-        <br />
-        <form:input cssClass="input" class="input" path="password" placeholder="Password" type="password"/>
-        <br />
-        <input class="whiteButton" type="submit" value="Log In" />
-    </form:form>
-    </div>
-</div>
-
 <div id="signup">
     <p class="p" style="font-size: 24px; font-weight: 300;">Welcome</p>
         <p class="soft">Place is a simple-social networking application to share your story.</p>
 
         <form:form method="post" modelAttribute="account">
-            <form:input class="input" path="email" placeholder="Email"/>
+            <form:input  class="input" path="email" placeholder="Email"/>
             <br />
             <form:input class="input" path="userName" placeholder="User Name"/>
             <br />
-            <form:input class="input" path="password" placeholder="Password" type="password"/>
+            <form:input id="password" onkeyup="validatePassword(this);" class="input" path="password" placeholder="Password" type="password"/>
             <br />
             <input class="greenButton" type="submit" value="Create Account" />
 
             <br />
         </form:form>
     </div>
+<div id="header">
+    <div style="position: absolute; right:10%; top:30%;">
+        <p class="p" style="font-size: 24px; font-weight: 300">Log In</p>
+        <form:form method="post" modelAttribute="account">
+            <form:input cssClass="input" path="userName" placeholder="User Name"/>
+            <br />
+            <form:input cssClass="input" class="input" path="password" placeholder="Password" type="password"/>
+            <br />
+            <input class="whiteButton" type="submit" value="Log In" />
+        </form:form>
+    </div>
+</div>
 </body>
 
 

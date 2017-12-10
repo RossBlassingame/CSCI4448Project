@@ -7,15 +7,9 @@ public class Story {
 	// Each story has a unique storyID.
 	int storyID;
 	// Each story has some content.
-	String storyContent;
+	String story;
 	// Each story has a list of contents (may be empty).
 	ArrayList<Comment> listOfComments = new ArrayList<Comment>();
-
-	Story(String content){
-		//TODO generate unique ID
-		storyContent = content;
-	}
-
 
 	void addComment(String content){
 		listOfComments.add(new Comment(content));
@@ -24,13 +18,7 @@ public class Story {
 	void deleteComment(int cNum) {
 		listOfComments.remove(cNum);
 	}
-	
-	void notifyAllComments() {
-		/*
-		 * TODO Method that notifies all of the current
-		 * story's comments.
-		 */
-	}
+
 
 	public int getStoryID()
 	{
@@ -39,12 +27,13 @@ public class Story {
 	public void setStoryID(int _id){
 		storyID = _id;
 	}
-	public String getStoryContent(){
-		return storyContent;
+	public String getStory(){
+		return story;
 	}
+	public void setStory(String s){ story = s; };
 	public void setStoryContent(String content)
 	{
-		storyContent = content;
+		story = content;
 	}
 
 }

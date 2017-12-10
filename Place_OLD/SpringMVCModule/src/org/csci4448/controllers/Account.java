@@ -29,11 +29,11 @@ public abstract class Account {
 
 	ArrayList<Story> listOfStories = new ArrayList<Story>();
 	
-	public Boolean addStory(String storyContent) {
+	public Boolean addStory() {
 		/* TODO
 		 * Adding a story should work the same for both admins and users.
 		 */
-		Story story = new Story(storyContent);
+		Story story = new Story();
 		listOfStories.add(story);
 
 		return null;

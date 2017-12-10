@@ -18,7 +18,6 @@ public class ExampleSpringController {
     @RequestMapping(value = "/index", method = RequestMethod.POST)
     public String signUpForm(UserAccount a, Model model, RedirectAttributes r) {
         /* Get attributes of object a: userName, Password */
-        a.addStory("This is my first Story!");
         r.addFlashAttribute("accountForStory", a);
         //Check if it's a new user
         if(a.getEmail() != null){
@@ -31,6 +30,7 @@ public class ExampleSpringController {
     @RequestMapping(value = "/greeting", method = RequestMethod.GET)
     public String storyPage(@ModelAttribute("accountForStory") UserAccount a, Model model) {
         model.addAttribute("account", a);
+        model.addAttribute("story", new Story());
         return "greeting";
     }
 
