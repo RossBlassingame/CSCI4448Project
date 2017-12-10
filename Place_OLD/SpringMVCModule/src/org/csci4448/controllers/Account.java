@@ -21,7 +21,7 @@ public abstract class Account {
 	 * entered an incorrect password.
 	 */
 	protected String password;
-	
+	protected int storyCount = 0;
 	/* 
 	 * Each account has a list of stories. (Like viewing a Facebook profile, one 
 	 * may view a user's post history.
@@ -30,25 +30,32 @@ public abstract class Account {
 	ArrayList<Story> listOfStories = new ArrayList<Story>();
 	
 	public Boolean addStory() {
-		/* TODO
-		 * Adding a story should work the same for both admins and users.
-		 */
 		Story story = new Story();
+		storyCount++;
 		listOfStories.add(story);
 
 		return null;
 	}
-	// TODO Editing a story may be different for admins vs. users.
+
+	public void addStoryToList(Story s){
+		storyCount++;
+		listOfStories.add(s);
+	}
+
+	public Story getStoryAtIndex(int i){
+		return listOfStories.get(i);
+	}
+
+	public int getSizeOfStoryList(){
+		return listOfStories.size();
+	}
+
 	abstract Boolean editStory(int storyID, String content);
-	// TODO Deleting a story may be different for admins vs. users.
 	abstract Boolean deleteStory(int storyID);
 	
-	// TODO Deleting an account may differ for admins vs. users.
 	abstract Boolean deleteAccount(int accountID);
 	void notifyAllStories() {
-		/* TODO
-		 * Notifying all stories of should work the same for admins vs. users.
-		 */
+
 	}
 	
 }

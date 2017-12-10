@@ -8,6 +8,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 @Controller
 public class ExampleSpringController {
     private UserAccount currentUser;
+    private UserAccount exampleFriend;
 
     @RequestMapping(value = "/index", method = RequestMethod.GET)
     public String signupLogin(Model model) {
@@ -30,17 +31,24 @@ public class ExampleSpringController {
     @RequestMapping(value = "/greeting", method = RequestMethod.GET)
     public String storyPage(@ModelAttribute("accountForStory") UserAccount a, Model model) {
         model.addAttribute("account", a);
+        currentUser = a;
         model.addAttribute("story", new Story());
         return "greeting";
     }
 
 
     @RequestMapping(value = "/greeting", method = RequestMethod.POST)
-    public String inputForm(UserAccount a, Model model) {
+    public String inputForm(Story s, Model model) {
         /* Get attributes of object a: userName, Password */
 //        a.addStory("This is my first Story!");
 //        model.addAttribute("account", a);
-        model.addAttribute("account", a);
+        model.addAttribute("account", currentUser);
+
+        currentUser.addStoryToList(s);
+        for (int i = 0; i<currentUser.getSizeOfStoryList(); i++){
+            String key = "story"+Integer.toString(i);
+            model.addAttribute(key,currentUser.getUserName()+": "+currentUser.getStoryAtIndex(i).getStory());
+        }
         return "greeting";
     }
 

@@ -27,10 +27,11 @@
             font-size: 36px;
             font-family: Helvetica, "Helvetica Neue", Arial;
         }
-        #header{
-            position: absolute;
+        #Header{
+            position: fixed;
             left: 0;
             top: 0;
+            z-index: 1;
             width: 100%;
             height: 12%;
             background-color: rgba(25,167,119,1);
@@ -39,22 +40,43 @@
 
         .story{
 
-            margin: 0px;
+            margin: 20px;
             width: 100%;
-            height: 25%;
+            height: 400px;
             background-color: rgba(245,245,245,1);
             -webkit-box-shadow: -3px 5px 10px rgba(0,0,0,0.2);
         }
         #Feed{
-
-            padding: 50px;
+            position: absolute;
+            top:100px;
+            width:92%;
+            padding-left: 30px;
+            padding-right: 30px;
         }
         .input{
             width:100%;
             height:100px;
             margin:0px;
+            font-size: 22px;
         }
+        .greenButton{
+            background-color: rgba(25,167,119,1);
+            color:white;
+            width:200px;
+            height:60px;
+            padding: 5px;
+            border: none;
+        }
+        .textForm{
+            margin: 20px;
+            width: 100%;
+            height: 200px;
+            background-color: rgba(245,245,245,1);
+            -webkit-box-shadow: -3px 5px 10px rgba(0,0,0,0.2);
+        }
+
     </style>
+
 </head>
 
 <body>
@@ -63,20 +85,19 @@
 </div>
 
 <div id="Feed">
-    <div class="story">
+    <div class="textForm">
     <form:form method="post" modelAttribute="story">
         <form:input cssClass="input" path="story" placeholder="What is in your head?"/>
         <br />
-        <input class="whiteButton" type="submit" value="Post" />
+        <input class="greenButton"  type="submit" value="Post" />
     </form:form>
     </div>
     <div class="story">
-        <p>Hello, World</p>
-        <p>Hello ${account.userName}! Your password is ${account.password}!</p>
-    </div>
-    <div class="story">
-        <p>Hello, World</p>
-        <p>Hello ${account.userName}! Your password is ${account.password}!</p>
+        <br />
+        <p>${story0}</p>
+        <p>${story1}</p>
+        <p>${story2}</p>
+        <p>${story3}</p>
     </div>
 </div>
 
