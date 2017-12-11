@@ -1,0 +1,22 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name = "Comment" table = "Comments">
+
+        <meta attribute = "class-description">
+            This class contains comments on stories.
+        </meta>
+
+        <id name = "commentID" type = "int" column = "commentID">
+            <generator class="native"/>
+        </id>
+
+        <property name = "accountID" column = "accountID" type = "int"/>
+        <property name = "storyID" column = "storyID" type = "int"/>
+        <property name = "commentContent" column = "content" type = "varchar(200)"/>
+
+    </class>
+</hibernate-mapping>
