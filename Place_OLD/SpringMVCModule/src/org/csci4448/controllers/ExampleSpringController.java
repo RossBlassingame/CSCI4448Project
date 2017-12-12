@@ -1,5 +1,6 @@
 package org.csci4448.controllers;
 
+import org.springframework.orm.hibernate5.HibernateOperations;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -60,6 +61,7 @@ public class ExampleSpringController {
         newUser.setEmail(a.getEmail());
         newUser.setUserName(a.getUserName());
         newUser.setPassword(a.getPassword());
+
         currentUser = newUser;
         model.addAttribute("account", newUser);
         return "newuser";
